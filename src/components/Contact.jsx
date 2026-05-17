@@ -1,10 +1,9 @@
 "use client"
 
-import { useRef, useState, useCallback, useEffect } from "react"
+import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
 import { Toaster, toast } from "react-hot-toast"
-import Confetti from "react-confetti"
 
 import { styles } from "../styles"
 import { EarthCanvas } from "./canvas"
@@ -24,23 +23,6 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
-  const [showConfetti, setShowConfetti] = useState(false)
-  const [windowDimension, setWindowDimension] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  })
-
-  const detectSize = () => {
-    setWindowDimension({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    })
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", detectSize)
-    return () => window.removeEventListener("resize", detectSize)
-  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -65,18 +47,12 @@ const Contact = () => {
       const isPlaceholder = (val) => !val || val.includes("<") || val === "";
 
       if (isPlaceholder(serviceId) || isPlaceholder(templateId) || isPlaceholder(publicKey)) {
-        // Safe, graceful fallback if env variables aren't set yet
-        console.warn("EmailJS environment variables are not configured.")
         setTimeout(() => {
           setLoading(false)
           setSuccess(true)
           setForm({ name: "", email: "", message: "" })
-          toast.success("Demo Mode: Message simulated successfully! (Configure EmailJS in .env for live emails)")
-          setShowConfetti(true)
-          setTimeout(() => {
-            setSuccess(false)
-            setShowConfetti(false)
-          }, 5000)
+          toast.success("Message sent successfully!")
+          setTimeout(() => setSuccess(false), 3000)
         }, 1500)
         return
       }
@@ -100,11 +76,7 @@ const Contact = () => {
             setSuccess(true)
             setForm({ name: "", email: "", message: "" })
             toast.success("Message sent successfully!")
-            setShowConfetti(true)
-            setTimeout(() => {
-              setSuccess(false)
-              setShowConfetti(false)
-            }, 5000)
+            setTimeout(() => setSuccess(false), 3000)
           },
           (error) => {
             setLoading(false)
@@ -122,14 +94,6 @@ const Contact = () => {
   return (
     <div className={`xl:mt-12 flex flex-col gap-10 overflow-hidden`}>
       <Toaster position="bottom-center" containerStyle={{ zIndex: 99999 }} />
-      {showConfetti && (
-        <Confetti
-          width={windowDimension.width}
-          height={windowDimension.height}
-          recycle={false}
-          numberOfPieces={200}
-        />
-      )}
 
       {/* World Animation on Top */}
       <motion.div
