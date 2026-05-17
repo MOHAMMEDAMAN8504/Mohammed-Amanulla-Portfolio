@@ -114,7 +114,7 @@ const experiences = [
   {
     title: "Ash: A Personalized AI Desktop Assistant",
     company_name: "Ash (Academic Project)",
-    icon: genai,
+    icon: web,
     iconBg: "#1d1836",
     date: "Academic Project",
     points: [
@@ -127,7 +127,7 @@ const experiences = [
   {
     title: "HireBridge - Job Portal System",
     company_name: "HireBridge (Internship Project)",
-    icon: deloitte,
+    icon: fullstack,
     iconBg: "#1d1836",
     date: "Internship Project",
     points: [
@@ -140,7 +140,7 @@ const experiences = [
   {
     title: "3D Rubik’s Cube Solver",
     company_name: "Personal Project",
-    icon: udemy,
+    icon: backend,
     iconBg: "#1d1836",
     date: "Personal Project",
     points: [
