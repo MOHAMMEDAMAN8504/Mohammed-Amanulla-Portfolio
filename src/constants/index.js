@@ -103,7 +103,7 @@ const experiences = [
     company_name: "Pentagon Space Private Limited",
     icon: pentagon,
     iconBg: "#1d1836",
-    date: "Jan 2026 – May 2026",
+    date: "Feb 2026 – May 2026",
     points: [
       "Worked with Java programming and object-oriented programming (OOP) concepts to strengthen software development fundamentals and build efficient application logic.",
       "Debugged applications, optimized code performance, and improved program accuracy through structured testing, troubleshooting, and problem-solving techniques.",
@@ -159,7 +159,7 @@ const extracurricular = [
     type: "Pentagon Space Private Limited",
     icon: pentagon,
     iconBg: "#1d1836",
-    date: "Jan 2026 – May 2026",
+    date: "Feb 2026 – May 2026",
     points: [
       "Strengthened core software development fundamentals and application logic using Java and OOP.",
       "Gained exposure to web application workflows, database handling, and backend integration concepts."
