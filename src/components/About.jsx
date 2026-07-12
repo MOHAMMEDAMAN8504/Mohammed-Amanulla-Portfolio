@@ -75,7 +75,7 @@ const About = () => {
         >
           <ul className="space-y-8">
             {[
-              { icon: "💻", text: "Computer Science Engineering student specializing in Data Science, passionate about building practical and intelligent software solutions." },
+              { icon: "💻", text: "Computer Science Engineering graduate specializing in Data Science, passionate about building practical and intelligent software solutions." },
               { icon: "🎓", text: "Focused on software development, AI-powered applications, and full-stack technologies, with a strong interest in creating impactful digital products." },
               { icon: "🛠", text: "Developed impactful projects including HireBridge – a Job Portal System, Ash – a Personalized AI Desktop Assistant, and a 3D Rubik’s Cube Solver with interactive visualization." },
               { icon: "🔧", text: "Skilled in Java, SQL, HTML, CSS, JavaScript, and modern web technologies, with hands-on experience in backend development, database management, and responsive UI design." },

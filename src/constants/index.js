@@ -69,7 +69,7 @@ const education = [
     company_name: "Rao Bahadur Y. Mahabaleswarappa Engineering College, Ballari",
     icon: web,
     iconBg: "#1d1836",
-    date: "2022 - Present",
+    date: "2022 - 2026",
     points: [
       "CGPA - 8.93",
     ],
@@ -228,21 +228,37 @@ const projects = [
     live_project_link: "https://github.com/MOHAMMEDAMAN8504",
   },
   {
-    name: "HireBridge – Job Portal System",
+    name: "HireBridge - A modern Job portal System",
     description:
-      "Built a full-stack job portal platform enabling recruiters and job seekers to manage applications, job postings, authentication, and profile workflows through a responsive web-based interface. Designed and implemented backend functionality using Java and SQL, including database operations, user management, job filtering, and role-based access handling. Developed responsive frontend interfaces using HTML, CSS, and JavaScript to deliver an intuitive user experience with streamlined navigation and application workflows. Focused on scalable database design, clean UI interactions, and efficient system integration while improving usability, data handling, and platform reliability across different modules.",
+      "Developed a full-stack job portal using Java, Spring Boot, PostgreSQL, and Bootstrap with secure authentication and job application management.",
     tags: [
       {
         name: "Java",
         color: "blue-text-gradient",
       },
       {
-        name: "SQL",
+        name: "Spring Boot",
         color: "green-text-gradient",
       },
       {
-        name: "HTML/CSS/JS",
+        name: "PostgreSQL",
         color: "pink-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "HTML",
+        color: "green-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "blue-text-gradient",
       },
     ],
     image: hirebridge_project,
